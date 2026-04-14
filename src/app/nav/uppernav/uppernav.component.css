@@ -1,0 +1,88 @@
+.uppernav {
+  background-color: var(--ferre-surface, #ffffff);
+  border-bottom: 1px solid var(--ferre-border, rgba(158, 108, 69, 0.35));
+  padding: 0.5rem 1rem;
+}
+
+.uppernav-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  max-width: 100%;
+}
+
+.uppernav-search {
+  flex: 1 1 220px;
+  min-width: min(100%, 200px);
+  max-width: 100%;
+}
+
+.uppernav-search-group .input-group-text {
+  background-color: var(--ferre-surface, #ffffff);
+  border-color: var(--ferre-border-strong, #9e6c45);
+  color: var(--ferre-neutral, #9e6c45);
+}
+
+.uppernav-search-group .form-control {
+  border-color: var(--ferre-border-strong, #9e6c45);
+}
+
+.uppernav-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  display: inline-flex;
+}
+
+.uppernav-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.5rem;
+  flex: 0 1 auto;
+  margin-left: auto;
+}
+
+.uppernav-icon-btn {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  padding: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uppernav-icon-btn .material-icons {
+  font-size: 1.5rem;
+}
+
+.uppernav-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+
+.uppernav-title {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--ferre-text, #3d2917);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.uppernav-logo {
+  width:40px;
+  height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: var(--ferre-radius, 0.5rem);
+}
+
+@media (max-width: 767.98px) {
+  .uppernav-title {
+    display: none;
+  }
+}

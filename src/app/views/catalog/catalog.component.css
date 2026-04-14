@@ -1,0 +1,298 @@
+.catalog{
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.catalog-alerts{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.info-card {
+    flex: 1;
+    background-color: var(--ferre-surface, #ffffff);
+    padding: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    div{
+        p:first{
+            font-size: 16pt;
+            color: grey;
+            margin-bottom: 0rem !important;
+        }
+    }
+    
+    p{
+        font-size: 14pt;
+        font-weight: 800;
+        color: black;
+        margin-bottom: 0rem !important;
+    }
+}
+
+.info-card:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.008);
+}
+
+.low-stock-card {
+    flex: 1;
+    background-color: var(--ferre-surface, #ffffff);
+    padding: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    color: orange;
+    p{
+        font-size: 16pt;
+        color: grey;
+        margin-bottom: 0rem !important;
+    }
+    p:last-child {
+        font-size: 14pt;
+        font-weight: 800;
+        color: orange;
+        margin-bottom: 0rem !important;
+    }
+}
+
+.low-stock-card:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.008);
+}
+
+.out-of-stock-card {
+    flex: 1;
+    background-color: var(--ferre-surface, #ffffff);
+    padding: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    color: red;
+    p{
+        font-size: 16pt;
+        color: grey;
+        margin-bottom: 0rem !important;
+    }
+    p:last-child {
+        font-size: 14pt;
+        font-weight: 800;
+        color: red;
+        margin-bottom: 0rem !important;
+    }
+}
+
+.out-of-stock-card:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.008);
+}
+
+.inventory-value-card {
+    flex: 1;
+    background-color: var(--ferre-surface, #ffffff);
+    padding: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    color: green;
+    p{
+        font-size: 16pt;
+        color: grey;
+        margin-bottom: 0rem !important;
+    }
+    p:last-child {
+        font-size: 14pt;
+        font-weight: 800;
+        color: green;
+        margin-bottom: 0rem !important;
+    }
+}
+
+.inventory-value-card:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.008);
+}
+
+.catalog-table{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--ferre-surface, #ffffff);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    table{
+        padding: -1rem !important;
+        width: 100%;
+        border-collapse: collapse;
+        th{
+            background-color: var(--ferre-surface-elevated, #ffffff);
+            min-height: 80px;
+            height: 80px;
+            margin: 0.2rem;
+            text-justify: center;
+        }
+        tr td{
+            background-color: var(--ferre-surface, #ffffff);
+            min-height: 40px;
+            height: 40px;
+            margin: 0.2rem;
+            text-justify: center;
+            cursor: pointer;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            text-align: center;
+        }
+        tr th{
+            padding-left: 2rem;
+            padding-right: 2rem;
+            text-align: center;
+        }
+        tr{
+           .nonI{
+                background-color: var(--ferre-surface, #ffffff);
+            }
+            .pairI{
+                background-color: var(--ferre-surface, #ffffff);
+            } 
+            td{
+                border-bottom: 1px solid gray;
+            }
+        }
+        tr:hover{
+            .pairI{
+                background-color: #f0f0f0 !important;
+            } 
+            .nonI{
+                background-color: #f0f0f0 !important;
+            } 
+            transition: all 0.1s ease;
+            transform: scale(1.0008);
+            background-color: #f6f6f6;
+            opacity: 90%;
+        }
+
+    }
+}
+
+.catalog-table-header{
+    gap: 1rem;
+    padding: 0rem 1.5rem 0rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-table-filters{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.icon-container {
+    width: 35px;
+    height: 35px;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ferre-primary);
+    background-color: var(--ferre-primary-100);
+}
+
+.table-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.table-content-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    p:first-child {
+        font-size: 14pt;
+        font-weight: 800;
+        margin-bottom: 0rem !important;
+    }
+    p:last-child {
+        font-size: 12pt;
+        font-weight: 400;
+        color: gray;
+        margin-bottom: 0rem !important;
+    }
+}
+
+.category-text{
+    font-size: 12pt;
+    font-weight: 600;
+    color: gray;
+    padding: 5px;
+    background-color: var(--ferre-surface-elevated, #ffffff);
+}
+
+.general-text{
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+.active-text{
+    font-size: 12pt;
+    font-weight: 600;
+    color: rgba(52, 142, 0, 0.998);
+    padding: 8px;
+    border-radius: 5px;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    background-color: #9bff768e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.low-text{
+    font-size: 12pt;
+    font-weight: 600;
+    color: rgba(226, 109, 0, 0.998);
+    padding: 8px;
+    border-radius: 5px;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    background-color: #ffb2538e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-stock-text{
+    font-size: 12pt;
+    font-weight: 600;
+    color: rgba(231, 0, 0, 0.998);
+    padding: 8px;
+    border-radius: 5px;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    background-color: #ff66668e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,40 @@
+<nav class="uppernav" aria-label="Barra superior">
+  <div class="uppernav-inner">
+    <div class="uppernav-search">
+      <label class="visually-hidden" for="uppernav-search-input">Buscar</label>
+      <div class="input-group uppernav-search-group">
+        <span class="input-group-text" aria-hidden="true">
+          <span class="material-icons uppernav-icon">search</span>
+        </span>
+        <input
+          id="uppernav-search-input"
+          type="search"
+          class="form-control"
+          placeholder="Buscar productos…"
+          autocomplete="off"
+        />
+      </div>
+    </div>
+
+    <div class="uppernav-actions">
+      <button type="button" mat-icon-button matTooltip="Configuración" color="primary" aria-label="Configuración">
+        <span class="material-icons" aria-hidden="true">settings</span>
+      </button>
+      
+      <button type="button" mat-icon-button matTooltip="Notificaciones" color="primary" aria-label="Notificaciones">
+        <span class="material-icons" aria-hidden="true">notifications</span>
+      </button>
+
+      <div class="uppernav-brand">
+        <span class="uppernav-title">Ferretería</span>
+        <img
+          class="uppernav-logo"
+          src="assets/logo.svg"
+          width="32"
+          height="32"
+          alt="Ferretería"
+        />
+      </div>
+    </div>
+  </div>
+</nav>

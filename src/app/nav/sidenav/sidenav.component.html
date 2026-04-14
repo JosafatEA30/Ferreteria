@@ -1,0 +1,82 @@
+<aside
+  class="sidenav"
+  [class.sidenav--collapsed]="collapsed"
+  [attr.aria-label]="'Navegación principal'"
+>
+  <div class="sidenav__header">
+    <button
+      type="button"
+      [matTooltip]="collapsed ?  'Abrir menú' : 'Cerrar menú'"
+      class="sidenav__collapse-btn"
+      (click)="toggleCollapsed()"
+      [attr.aria-expanded]="!collapsed"
+      [attr.aria-label]="collapsed ? 'Expandir menú' : 'Colapsar menú'"
+    >
+      <span class="material-icons" aria-hidden="true">
+        {{ collapsed ? 'chevron_right' : 'chevron_left' }}
+      </span>
+    </button>
+  </div>
+
+  <div class="sidenav__logo" *ngIf="!collapsed">
+    <div class="sidenav__logo-frame">
+      <img src="assets/logo.svg" alt="Ferretería" class="sidenav__logo-img" width="160" height="90" />
+    </div>
+  </div>
+
+  <div class="sidenav__logo-mini" *ngIf="collapsed" aria-hidden="true">
+    <img src="assets/logo.svg" alt="" class="sidenav__logo-img-mini" width="40" height="40" />
+  </div>
+
+  <nav class="sidenav__nav" aria-label="Secciones">
+    <ul class="sidenav__list">
+      <li>
+        <a
+          routerLink="/dashboard"
+          routerLinkActive="sidenav__link--active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="sidenav__link"
+        >
+          <span class="material-icons sidenav__link-icon" aria-hidden="true">dashboard</span>
+          <span class="sidenav__link-text">Dashboard</span>
+        </a>
+      </li>
+
+      <li class="sidenav__group">
+        <a routerLink="/catalogo" routerLinkActive="sidenav__link--active" class="sidenav__link">
+          <span class="material-icons sidenav__link-icon" aria-hidden="true">category</span>
+          <span class="sidenav__link-text">Catálogo</span>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/inventario" routerLinkActive="sidenav__link--active" class="sidenav__link">
+          <span class="material-icons sidenav__link-icon" aria-hidden="true">inventory_2</span>
+          <span class="sidenav__link-text">Inventario</span>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/historico-inventario" routerLinkActive="sidenav__link--active" class="sidenav__link">
+          <span class="material-icons sidenav__link-icon" aria-hidden="true">history</span>
+          <span class="sidenav__link-text">Histórico de inventario</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <footer class="sidenav__footer">
+    <button type="button" class="sidenav__help btn btn-ferre-outline">
+      <span class="material-icons" aria-hidden="true">help_outline</span>
+      <span class="sidenav__help-text">Ayuda</span>
+    </button>
+
+    <div class="sidenav__user">
+      <span class="material-icons sidenav__user-icon" aria-hidden="true">account_circle</span>
+      <div class="sidenav__user-info" *ngIf="!collapsed">
+        <span class="sidenav__user-label">Sesión</span>
+        <span class="sidenav__user-name">{{ loggedUserName }}</span>
+      </div>
+    </div>
+  </footer>
+</aside>

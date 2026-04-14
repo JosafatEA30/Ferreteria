@@ -1,0 +1,254 @@
+/* Design system: Ferretería — warm oranges, browns, Manrope */
+
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+/* —— Angular Material palettes (guía de marca) —— */
+$ferre-primary-map: (
+  50: #fff3e6,
+  100: #ffe0c2,
+  200: #ffcc94,
+  300: #ffb866,
+  400: #ffa33d,
+  500: #fe7101,
+  600: #e56500,
+  700: #cc5a00,
+  800: #b34e00,
+  900: #803800,
+  A100: #ffcc94,
+  A200: #fe7101,
+  A400: #cc5a00,
+  A700: #803800,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: white,
+    A400: white,
+    A700: white,
+  ),
+);
+
+$ferre-accent-map: (
+  50: #fef7ed,
+  100: #f5e0bc,
+  200: #e8c78a,
+  300: #daa856,
+  400: #ce8a1f,
+  500: #c56902,
+  600: #ad5b02,
+  700: #8f4a02,
+  800: #713b02,
+  900: #452502,
+  A100: #f5e0bc,
+  A200: #c56902,
+  A400: #8f4a02,
+  A700: #452502,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: white,
+    A400: white,
+    A700: white,
+  ),
+);
+
+$ferre-primary: mat.define-palette($ferre-primary-map, 500, 100, 700);
+$ferre-accent: mat.define-palette($ferre-accent-map, 500, 100, 700);
+$ferre-warn: mat.define-palette(mat.$red-palette);
+
+$ferre-typography: mat.define-typography-config(
+  $font-family: '"Manrope", system-ui, sans-serif',
+  $headline: mat.define-typography-level(24px, 32px, 700),
+  $title: mat.define-typography-level(20px, 28px, 600),
+  $subheading-2: mat.define-typography-level(16px, 26px, 500),
+  $body-1: mat.define-typography-level(14px, 22px, 500),
+  $body-2: mat.define-typography-level(14px, 22px, 600),
+  $caption: mat.define-typography-level(12px, 18px, 500),
+  $button: mat.define-typography-level(14px, 14px, 600)
+);
+
+$ferre-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $ferre-primary,
+      accent: $ferre-accent,
+      warn: $ferre-warn,
+    ),
+    typography: $ferre-typography,
+    density: 0,
+  )
+);
+
+@include mat.all-component-themes($ferre-theme);
+
+/* —— Bootstrap: variables antes del import —— */
+$primary: #fe7101;
+$secondary: #c56902;
+$success: #6b7c32;
+$info: #9e6c45;
+$warning: #e5a505;
+$dark: #3d2917;
+$body-bg: #f9fafb;
+$body-color: #3d2917;
+$font-family-sans-serif: 'Manrope', system-ui, -apple-system, sans-serif;
+$border-radius: 0.5rem;
+$border-radius-sm: 0.375rem;
+$border-radius-lg: 0.75rem;
+$border-radius-pill: 50rem;
+$input-border-color: rgba(158, 108, 69, 0.45);
+$input-placeholder-color: #9e6c45;
+$component-active-bg: #3d2917;
+
+@import 'bootstrap/scss/bootstrap';
+
+/* —— Tokens globales (app + componentes custom) —— */
+:root {
+  /* Escala primaria (Material hues; usar p.ej. var(--ferre-primary-400)) */
+  --ferre-primary-50: #fff3e6;
+  --ferre-primary-100: #ffe0c2;
+  --ferre-primary-200: #ffcc94;
+  --ferre-primary-300: #ffb866;
+  --ferre-primary-400: #ffa33d;
+  --ferre-primary-500: #fe7101;
+  --ferre-primary-600: #e56500;
+  --ferre-primary-700: #cc5a00;
+  --ferre-primary-800: #b34e00;
+  --ferre-primary-900: #803800;
+
+  /* Alias del tono principal (equivale a 500) */
+  --ferre-primary: #fe7101;
+  --ferre-secondary: #c56902;
+  --ferre-tertiary: #e5a505;
+  --ferre-neutral: #9e6c45;
+  --ferre-text: #3d2917;
+  --ferre-text-muted: #6b4f38;
+  --ferre-bg: #f9fafb;
+  --ferre-surface: #ffffff;
+  --ferre-surface-elevated: #f6f6f6;
+  --ferre-border: rgba(158, 108, 69, 0.35);
+  --ferre-border-strong: #9e6c45;
+  --ferre-olive: #6b7c32;
+  --ferre-brown-deep: #4a3425;
+  --ferre-danger: #8b3a2f;
+  --ferre-radius: 0.5rem;
+  --ferre-radius-pill: 50rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', system-ui, sans-serif;
+  background-color: var(--ferre-bg);
+  color: var(--ferre-text);
+}
+
+/* Tipografía de apoyo */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.mat-headline,
+.mat-title,
+.mat-h1,
+.mat-h2 {
+  color: var(--ferre-text);
+  font-weight: 700;
+}
+
+/* Tarjetas / superficies tipo guía */
+.mat-card {
+  border-radius: var(--ferre-radius) !important;
+  background-color: var(--ferre-surface) !important;
+  border: 1px solid var(--ferre-border);
+}
+
+/* Botones Material: esquinas redondeadas */
+.mat-button,
+.mat-flat-button,
+.mat-raised-button,
+.mat-stroked-button,
+.mat-icon-button {
+  border-radius: var(--ferre-radius) !important;
+}
+
+/* Utilidades Bootstrap alineadas */
+.btn-ferre-primary-dark {
+  @extend .btn;
+  background-color: var(--ferre-brown-deep);
+  color: #fff;
+  border: none;
+  border-radius: var(--ferre-radius);
+  font-weight: 600;
+}
+
+.btn-ferre-secondary-surface {
+  @extend .btn;
+  background-color: var(--ferre-surface);
+  color: var(--ferre-text);
+  border: 1px solid var(--ferre-border);
+  border-radius: var(--ferre-radius);
+  font-weight: 600;
+}
+
+.btn-ferre-outline {
+  @extend .btn;
+  background: transparent;
+  color: var(--ferre-text);
+  border: 1px solid var(--ferre-brown-deep);
+  border-radius: var(--ferre-radius);
+  font-weight: 600;
+}
+
+.btn-ferre-pill-orange {
+  @extend .btn;
+  background-color: var(--ferre-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--ferre-radius-pill);
+  font-weight: 600;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.form-control,
+.form-select {
+  border-radius: var(--ferre-radius);
+  border-color: var(--ferre-border-strong);
+  background-color: var(--ferre-surface);
+  color: var(--ferre-text);
+}
+
+.form-control::placeholder {
+  color: var(--ferre-neutral);
+  opacity: 0.9;
+}
+
+.form-control:focus {
+  border-color: var(--ferre-secondary);
+  box-shadow: 0 0 0 0.2rem rgba(254, 113, 1, 0.2);
+}

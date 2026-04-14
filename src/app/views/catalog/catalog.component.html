@@ -1,0 +1,236 @@
+<div class="catalog">
+    <div class="catalog-header">
+        <div>
+            <h3>Catálogo de productos</h3>
+            <p>Catálogo de productos disponibles para la venta</p>
+        </div>
+        <div class="header-buttons">
+            <button mat-raised-button color="primary">
+                Agregar producto
+                <i class="material-icons">add</i>
+            </button>
+            <button mat-raised-button color="accent">
+                Descargar CSV
+                <i class="material-icons">file_download</i>
+            </button>
+        </div>        
+    </div>
+
+    <div class="catalog-alerts">
+        <div class="info-card">
+            <div class="d-flex flex-row align-items-center gap-2">
+                <p style="color: grey;">Total de productos</p>
+                <i class="material-icons">inventory</i>
+            </div>
+            <p>100</p>
+        </div>
+        <div class="low-stock-card">
+            <div class="d-flex flex-row align-items-center gap-2">
+                <p style="color: grey;">Productos con stock bajo</p>
+                <i class="material-icons">trending_down</i>
+            </div>
+            <p>10</p>
+        </div>
+        <div class="out-of-stock-card">
+            <div class="d-flex flex-row align-items-center gap-2">
+                <p style="color: grey;">Productos sin stock</p>
+                <i class="material-icons">error</i>
+                
+            </div>
+            <p>10</p>
+        </div>
+        <div class="inventory-value-card">
+            <div class="d-flex flex-row align-items-center">
+                <p style="color: grey;">Valor del inventario</p>
+                <i class="material-icons">attach_money</i>
+            </div>
+            <p>$100,000</p>
+        </div>
+    </div>
+
+    <div class="catalog-table">
+        <div class="catalog-table-header">
+            <div class="catalog-table-filters">
+                <mat-form-field>
+                    <mat-label>Buscar</mat-label>
+                    <input matInput type="text">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Categoría</mat-label>
+                    <mat-select>
+                        <mat-option value="all">Todos</mat-option>
+                        <mat-option value="plomeria">Plomería</mat-option>
+                        <mat-option value="electricidad">Electricidad</mat-option>
+                        <mat-option value="pintura">Pintura</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Precio por unidad</th>
+                <th>Stock</th>
+                <th>Estatus</th>
+                <th>Acciones</th>
+            </tr>
+            <tr>
+                <td class="nonI">
+                    <div class="general-text">
+                        #FDS3443
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="table-content gap-2">
+                        <div class="table-content-text mt-2 mb-2">
+                            <p>Producto 1</p>
+                            <p>Descripcion del producto</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="table-content gap-2">
+                        <div class="icon-container">
+                            <i class="material-icons">build</i>
+                        </div>
+                        <div class="category-text mt-2 mb-2">
+                            Categoría 1
+                        </div>
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="general-text">
+                        $100.00
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="general-text">
+                        100
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="active-text">
+                        <span>Activo</span>
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="actions-container">
+                        <button mat-icon-button color="primary" matTooltip="Editar producto">
+                            <i class="material-icons">edit</i>
+                        </button>
+                        <button mat-icon-button color="warn" matTooltip="Eliminar producto">
+                            <i class="material-icons">delete</i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="nonI">
+                    <div class="general-text">
+                        #LSFDS054
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="table-content gap-2">
+                        <div class="table-content-text mt-2 mb-2">
+                            <p>Producto 2</p>
+                            <p>Descripcion del producto 2</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="table-content gap-2">
+                        <div class="icon-container">
+                            <i class="material-icons">flash_on</i>
+                        </div>
+                        <div class="category-text mt-2 mb-2">
+                            Categoría 2
+                        </div>
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="general-text">
+                        $60.00
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="general-text">
+                        20
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="low-text">
+                        <span>Stock bajo</span>
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="actions-container">
+                        <button mat-icon-button color="primary" matTooltip="Editar producto">
+                            <i class="material-icons">edit</i>
+                        </button>
+                        <button mat-icon-button color="warn" matTooltip="Eliminar producto">
+                            <i class="material-icons">delete</i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="nonI">
+                    <div class="general-text">
+                        #DFDSFSD
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="table-content gap-2">
+                        <div class="table-content-text mt-2 mb-2">
+                            <p>Producto 3</p>
+                            <p>Descripcion del producto 3</p>
+                        </div>
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="table-content gap-2">
+                        <div class="icon-container">
+                            <i class="material-icons">format_paint</i>
+                        </div>
+                        <div class="category-text mt-2 mb-2">
+                            Categoría 3
+                        </div>
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="general-text">
+                        $140.00
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="general-text">
+                        0
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="no-stock-text">
+                        <span>Sin stock</span>
+                    </div>
+                </td>
+                <td class="nonI">
+                    <div class="actions-container">
+                        <button mat-icon-button color="primary" matTooltip="Editar producto">
+                            <i class="material-icons">edit</i>
+                        </button>
+                        <button mat-icon-button color="warn" matTooltip="Eliminar producto">
+                            <i class="material-icons">delete</i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="d-flex flex-row justify-content-end mt-3">
+            <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+        </div>
+    </div>
+</div>
